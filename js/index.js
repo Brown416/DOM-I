@@ -40,3 +40,73 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const codeImgtop = document.getElementById('cta-img');
+
+codeImgtop.src = 'img/header-img.png';
+
+const navbar=document.querySelectorAll('a');
+console.log(navbar);
+navbar[0].textContent= siteContent["nav"]["nav-item-1"]
+
+navbar[1].textContent= siteContent["nav"]["nav-item-2"]
+
+navbar[2].textContent= siteContent["nav"]["nav-item-3"]
+
+navbar[3].textContent= siteContent["nav"]["nav-item-4"]
+
+navbar[4].textContent= siteContent["nav"]["nav-item-5"]
+
+const ctabuttonthing = document.querySelector("button");
+ctabuttonthing.textContent= siteContent["cta"]["button"]
+
+
+//need to come back and fix the font because what the fuck 
+const domText = document.querySelector("h1",);
+domText.textContent = "Dom Is Awesome!"
+//so I guess this part works
+const otherimage = document.getElementById("middle-img");
+otherimage.src= 'img/mid-page-accent.jpg';
+
+const h4titles = document.querySelectorAll('h4')
+h4titles[0].textContent = siteContent["main-content"]["features-h4"];
+h4titles[1].textContent = siteContent["main-content"]["about-h4"]
+h4titles[2].textContent = siteContent["main-content"]["services-h4"]
+h4titles[3].textContent = siteContent["main-content"]["product-h4"]
+h4titles[4].textContent = siteContent["main-content"]["vision-h4"];
+h4titles[5].textContent = siteContent["contact"]["contact-h4"];
+
+const ptop= document.querySelectorAll(".top-content p");
+ptop[0].textContent = siteContent["main-content"]["features-content"]
+ptop[1].textContent = siteContent["main-content"]["about-content"]
+
+const bTop = document.querySelectorAll(".bottom-content p");
+bTop[0].textContent = siteContent["main-content"]["services-content"]
+bTop[1].textContent = siteContent["main-content"]["product-content"]
+bTop[2].textContent = siteContent["main-content"]["vision-content"]
+
+const fastTalk = document.querySelectorAll(".contact p");
+fastTalk[0].textContent = siteContent["contact"]["address"]
+fastTalk[1].textContent = siteContent["contact"]["phone"]
+fastTalk[2].textContent = siteContent["contact"]["email"]
+
+const footer = document.querySelector("footer p")
+footer.textContent= siteContent["footer"]["copyright"];
+
+const backgroundcolor = document.querySelector("header");
+backgroundcolor.style.background = "red"
+               
+const newLink = document.createElement('a')
+newLink.textContent = 'New Link'
+newLink.classList.add('a-link')
+const nav = document.querySelector('nav')
+nav.prepend(newLink)
+const newLink2 = document.createElement('a')
+newLink2.textContent = 'New Link 2'
+newLink2.classList.add('a-link')
+const nav2 = document.querySelector('nav') 
+nav2.appendChild(newLink2)
+
+navbar.forEach(element => {
+  element.style.color = 'green';
+})
